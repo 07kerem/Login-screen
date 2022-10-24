@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Document</title>
+</head>
+<body>
+    
+    <form class="login-form active login-screen">
+        <div class="content">
+            <div class="img">
+                <img src="./img/image.jpeg" alt="">
+            </div>
+            <div class="form">
+                <div class="inpt">
+                <label for="username">username</label>
+                <input type="text" name="username" placeholder="username" id="username">
+                <label for="password">password</label>
+                <input type="password" name="password" placeholder="password" id="password">
+              </div>
+                <div class="radio">
+                <label for="remember" style="font-size: 13px;">remember me</label>
+                <input type="radio">
+                </div>
+                <button class="btn login-button" type="button">login</button>
+                <div class="warn-alert" style="display:none">
+                    <h4>Wrong username or password!</h4>
+                </div>
+                <div class="social">
+                <h2>login with social media</h2>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-linkedin"></i>
+                <i class="fab fa-twitter"></i>
+
+               </div>
+            </div>
+        </div>
+        <div class="login-true active">
+
+        </div>
+
+    </form>
+    <div class="auth-screen" style="display: none;">
+        <h4>hoşgeldin Kerem <br> başarılı bir şekilde <br> giriş yaptın </h4>
+    </div>
+    <!-- <script src="app.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+
+    <script>
+
+        $('.login-button').on('click', function(){
+            var username = $('#username').val();
+            var password = $('#password').val();
+
+            if(username != 'mert' && password != '123456'){
+                $('.warn-alert').show();
+            }else{
+                $('.login-screen').hide();
+                $('.auth-screen').show();
+            }
+        });
+
+
+
+
+        // $('.login-button').on('click', function(){
+        //     var username = $('#username').val();
+        //     var password = $('#password').val();
+
+        //     if(username != 'kerem' && password != '123456'){
+        //         $('.warn-alert').show();
+        //     }
+        //     else{  
+        //         $('.login-screen').hide();
+        //         $('.auth-screen').show();
+        //     }
+        // });
+
+
+
+
+      
+      
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>
